@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to insert new cell(s) at the beginning of the table row.</p>
+
+<table>
+  <tr id="myRow">
+    <td>First cell</td>
+    <td>Second cell</td>
+    <td>Third cell</td>
+  </tr>
+</table><br>
+
+
+
+<!-- <td>
+    <table border=5 bordercolor=green>
+     <tr>
+            <th>`+ i +`</th>
+            
+            
+    </tr>
+    <tr>
+ <th>_id</th>
+    <td>`+ ff._id +`</td>
+</tr>
+
+<tr>
+     <th>updatedAt</th>
+     <td>`+ ff.updatedAt +`</td>
+</tr>
+<tr>
+        <th>createdAt</th>
+        <td>`+ ff.createdAt+`</td> 
+</tr>
+<tr>
+         <th>pouchName</th>
+        <td>`+ ff.pouchName+`</td> 
+</tr>
+<tr>
+        <th>price</th>
+        <td>`+ ff.price+`</td> 
+</tr>
+<tr>
+        <th>deliveryType</th>
+        <td>`+ff.deliveryType+`</td> 
+</tr>
+<tr>
+        <th>limit</th>
+        <td>`+ ff.limit+`</td> 
+</tr>
+<tr>
+        <th>additionalPrice</th>
+        <td>`+ff.additionalPrice+`</td> 
+</tr>
+<tr>
+        <th>__v</th>
+        <td>`+ ff.__v+`</td> 
+</tr>
+<tr>
+        <th>isNCR</th>
+        <td>`+ff.isNCR+`</td> 
+</tr>
+    </table>
+</td> -->
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var row = document.getElementById("myRow");
+  var x = row.insertCell(0);
+  x.innerHTML = `<table class="list" id="formlist">
+           <thead>
+               <tr>
+                   <th>
+                       hiiiiiiiii
+
+                   </th>
+               </tr>
+
+
+
+           </thead>
+           <tbody>
+               <tr>
+                   <table>
+                       <tbody>
+                        <tr>
+                           <table>
+                            <tr>
+                               <th>111</th>
+                               <td>qqqq</td>
+                           </tr>
+
+                           <tr>
+                               <th>22222</th>
+                               <td>wwwwww</td>
+                           </tr>
+                           <tr>
+                               <th>33333</th>
+                               <td>eeeee</td>
+                           </tr>
+
+
+
+                            </table>
+                            <tr>
+                       </tbody>
+                   </table>
+               </tr>
+
+
+           </tbody>
+        </table>`;
+}
+
+
+for (joinnn in main) {
+    //  console.log(main[joinnn]);
+    if (joinnn == joinnn) {
+        // console.log(joinnn);
+        // console.log(main[joinnn]);
+        // for (i in main[joinnn]) {
+
+        var row = document.getElementById("myRow");
+        var x = row.insertCell(0);
+        x.innerHTML = `<table  >
+        <thead>
+        <tr>
+            <th>`+ joinnn + `</th>
+        </tr>
+        </thead>
+        <tbody id='showUsers'>
+        
+        
+
+        <tbody>
+    
+        </table>`;
+       
+
+        
+
+
+        for (i in main[joinnn]) {
+             console.log(i);
+            let ff = main[joinnn][i];
+            // console.log(ff._id);
+            let addDiv = document.createElement('tr');
+            addDiv.className = "myttr";
+
+            addDiv.innerHTML =`
+
+
+           
+            <table>
+                <tbody>
+                 <tr>
+                    <table>
+                     <tr>
+                        <th>`+i+`</th>
+                        
+                    </tr>
+
+                    <tr>
+                             <th>pouchName</th>
+                            <td>`+ ff.pouchName+`</td> 
+                </tr>
+                <tr>
+                <th>price</th>
+                <td>`+ ff.price+`</td> 
+</tr>
+<tr>
+<th>isNCR</th>
+<td>`+ff.isNCR+`</td> 
+</tr>
+
+
+                     </table>
+                     <tr>
+                </tbody>
+            </table>
+        
+
+
+
+           
+                    
+            
+            `;
+            document.getElementById("showUsers").appendChild(addDiv);
+
+            
+          
+        }
+
+
+console.log(joinnn.updatedAt);
+
+
+    }
+
+
+}
+</script>
+
+</body>
+</html>
